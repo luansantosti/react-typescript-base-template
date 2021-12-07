@@ -1,10 +1,16 @@
 import React from 'react';
+import { ThemeProvider } from 'styled-components';
+
+import theme from './styles/theme';
+import GlobalStyle from './styles/global';
+import ButtonToSeeThemeWorking from './components/ButtonToSeeThemeWorking';
 
 const App: React.FC = function () {
   return (
-    <div className="wrapper">
-      <h1>React 17 and TypeScript 4 App!🚀</h1>
-    </div>
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <ButtonToSeeThemeWorking />
+    </ThemeProvider>
   );
 };
 
